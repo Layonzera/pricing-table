@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-yellow: #ffcc29;
+  --bg-blue: #1d539e;
+  --ff-card: #828799;
+  --page-background: #f9fbfc;
+  --tcard-color: #1e2338;
+
+  --ff-open-sans: 'Open Sans', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--page-background);
+  font-family: var(--ff-open-sans);
+}
+
+.page {
+  max-width: 144rem;
+  height: 45rem;
+  background-color: var(--bg-blue);
+}
+
+header {
+  max-width: 55rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 10rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 6.5rem;
+}
+
+header p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 111rem;
+  margin: 7.5rem auto;
+}
+
+.card {
+  max-width: 35rem;
+  background-color: #ffffff;
+  height: 47rem;
+  padding: 3rem;
+  box-shadow: 0px 1px 2px rgba(142, 150, 185, 0.25);
+  border-radius: 0.8rem;
+  position: relative;
+}
+
+.card p {
+  color: var(--tcard-color);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.price {
+  margin-top: 2rem;
+}
+
+.price h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 5rem;
+  color: var(--tcard-color);
+  margin-bottom: 1rem;
+}
+
+.price h2 span {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.price h2 #month {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--ff-card);
+}
+
+.card .price + p {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--ff-card);
+  margin-bottom: 2rem;
+}
+
+#line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #eeeeee;
+}
+
+ul {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--ff-card);
+  font-size: 1.4rem;
+}
+
+ul li + li {
+  margin-top: 2rem;
+}
+
+button {
+  width: 80%;
+  padding: 1.2rem 2.4rem;
+  background-color: #ffffff;
+  border: 1px solid var(--bg-blue);
+  border-radius: 1rem;
+  cursor: pointer;
+  color: var(--bg-blue);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  position: absolute;
+  bottom: 3rem;
+}
+
+main .card:nth-child(2) {
+  margin-top: -1rem;
+  height: 49rem;
+}
+
+main .card:nth-child(2) > div:nth-child(1) {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 7rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--bg-yellow);
+  border-radius: 0.8rem 0.8rem 0 0;
+  padding: 2.5rem;
+}
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-card p {
+  color: var(--bg-blue);
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: 600;
+}
+
+.header-card span {
+  padding: 0.8rem 2.4rem;
+  background-color: var(--bg-blue);
+  color: #ffffff;
+  border-radius: 4rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.header-card span:hover,
+#btn-card-basic:hover {
+  background-color: #2163be;
+}
+
+main .card:nth-child(2) > .price {
+  margin-top: 5rem;
+}
+
+#btn-card-basic {
+  background-color: var(--bg-blue);
+  color: #ffffff;
+  font-size: 2rem;
+  border: none;
+  transition: background 0.2s;
+}
